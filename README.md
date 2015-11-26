@@ -1,0 +1,6 @@
+# BaiduMapTest
+之前按照《第一行代码》做过类似的应用，这次想做点自己的东西，但是BaiduMap的API升级之后完全是两种用法。
+关于key的获取：要知道应用的SHA1码和包名。在android studio环境下获取SHA1码比较麻烦，详情见http://www.bubuko.com/infodetail-1031689.html
+关于key的使用:现在不用在activity中编码了，直接在manifest文件application标签下添加meta-data设置
+关于mapview的获取也和原来不一样了，不再是直接引入layout文件，详情见代码。还要在这之前初始化application。
+关于armeabi和so文件的导入，也不只是复制黏贴到libs文件中，还要在app\src\main文件中新建jniLibs文件，将这些复制黏贴进去。
